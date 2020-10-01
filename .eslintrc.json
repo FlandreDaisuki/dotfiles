@@ -1,0 +1,62 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2021
+  },
+  "extends": [
+    "eslint:recommended",
+    // npm install --save-dev eslint-plugin-vue
+    "plugin:vue/recommended",
+    // npm install --save-dev eslint-plugin-node
+    "plugin:node/recommended",
+    // npm install --save-dev eslint-plugin-compat
+    "plugin:compat/recommended"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
+    // spacing
+    "key-spacing": "error",
+    "comma-spacing": "error",
+    "block-spacing": "error",
+    "arrow-spacing": "error",
+    "keyword-spacing": "error",
+    "object-curly-spacing": ["error", "always"],
+    "space-infix-ops": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", "never"],
+    // warning
+    "no-unused-vars": "warn",
+    // prefer
+    "prefer-const": "error",
+    // off
+    "no-console": "off",
+
+    // plugin:vue
+    "vue/max-attributes-per-line": "off",
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "always",
+        "normal": "never",
+        "component": "always"
+      }
+    }],
+
+    // plugin:node
+    "node/no-unsupported-features/node-builtins": ["error", { "version": ">=12.0.0" }],
+    "node/no-unsupported-features/es-builtins": ["error", { "version": ">=12.0.0" }],
+
+    // plugin:compat
+    "compat/compat": "warn"
+  }
+}

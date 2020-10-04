@@ -1,4 +1,4 @@
-alias git="LANG=en_US.utf8 git"
+alias git="LC_ALL=C git"
 alias cls='clear'
 alias py='py3'
 alias py2='python2'

@@ -1,9 +1,5 @@
-alias git="LC_ALL=C git"
+alias git='LC_ALL=C git'
 alias cls='clear'
-alias py='py3'
-alias py2='python2'
-alias py3='python3'
-alias py.server='python3 -m http.server'
 #alias cat='bat'
 #alias rm='rm -i'
 alias clear.cache='sudo bash -c "echo 1 > /proc/sys/vm/drop_caches"'
@@ -19,6 +15,14 @@ alias unzip.big5='unzip -O cp950'
 alias unzip.gb='unzip -O cp936'
 alias unzip.jp='unzip -O cp932'
 alias unzip.kr='unzip -O cp949'
+
+# py ecosys
+alias py='py3'
+alias py2='python2'
+alias py3='python3'
+alias py.server='python3 -m http.server'
+## https://stackoverflow.com/a/3452888
+alias pip.upgrade.all='pip list --outdated --format=freeze | grep -v "^\-e" | cut -d = -f 1 | xargs -n1 pip install -U'
 
 # wine
 alias wine.jp='LANG=ja_JP.utf8 wine'
